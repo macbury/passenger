@@ -287,6 +287,7 @@ private
 			:source_root => SOURCE_ROOT,
 			:support_dir => passenger_support_files_dir,
 			:nginx_dir   => nginx_dir,
+			:tmp_fir		 => @options[:tmp],
 			:version     => @options[:nginx_version],
 			:tarball     => @options[:nginx_tarball],
 			:binaries_url_root => @options[:binaries_url_root],
