@@ -163,6 +163,7 @@ protected
 		super
 		@plugin.call_hook(:runtime_installer_start, self) if @plugin
 		@working_dir = File.join(@tmp_dir, "/#{myself}-passenger-standalone-#{Process.pid}")
+		
 		FileUtils.rm_rf(@working_dir)
 		FileUtils.mkdir_p(@working_dir)
 		@download_binaries = true if !defined?(@download_binaries)

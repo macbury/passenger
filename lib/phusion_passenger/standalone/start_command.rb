@@ -192,6 +192,10 @@ private
 				wrap_desc("Nginx binary to use as core")) do |value|
 				@options[:nginx_bin] = value
 			end
+      opts.on("--nginx-tmp DIRECTORY", String,
+        wrap_desc("Where download all nginx binaries and compile them")) do |value|
+        @options[:tmp] = value
+      end
 			opts.on("--nginx-version VERSION", String,
 				wrap_desc("Nginx version to use as core (default: #{@options[:nginx_version]})")) do |value|
 				@options[:nginx_version] = value
@@ -287,7 +291,7 @@ private
 			:source_root => SOURCE_ROOT,
 			:support_dir => passenger_support_files_dir,
 			:nginx_dir   => nginx_dir,
-			:tmp_fir		 => @options[:tmp],
+			:tmp_dir		 => @options[:tmp],
 			:version     => @options[:nginx_version],
 			:tarball     => @options[:nginx_tarball],
 			:binaries_url_root => @options[:binaries_url_root],
