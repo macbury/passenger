@@ -35,7 +35,8 @@ class Command
 		:max_pool_size => 6,
 		:min_instances => 1,
 		:spawn_method  => 'smart-lv2',
-		:nginx_version => PREFERRED_NGINX_VERSION
+		:nginx_version => PREFERRED_NGINX_VERSION,
+		:tmp => "/tmp"
 	}.freeze
 	
 	include Utils
